@@ -11,6 +11,7 @@ class _RiwayatState extends State<Riwayat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,31 +89,7 @@ class _RiwayatState extends State<Riwayat> {
       ),
 
       //bottom navigation bar
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Beranda",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.document_scanner),
-            label: "Riwayat",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.people),
-            label: "Tetangga",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.map),
-            label: "Jelajahi",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Akun",
-          ),
-        ],
-      ),
+      
     );
   }
 }

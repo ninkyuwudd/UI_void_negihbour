@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'riwayat.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -99,7 +100,9 @@ class _LoginPageState extends State<LoginPage> {
                               shape: const StadiumBorder(),
                               primary: const Color.fromARGB(255, 101, 137, 255),
                               ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const  HomePage()));
+                          },
                           child: const Text("Masuk")),
                     ),
                     TextButton(
