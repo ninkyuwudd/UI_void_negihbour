@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'riwayat.dart';
-import 'home_page.dart';
+import 'folder_navbarpage/riwayat.dart';
+import 'folder_navbarpage/home_page.dart';
+import 'main_navigationbar_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -101,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                               primary: const Color.fromARGB(255, 101, 137, 255),
                               ),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const  HomePage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const  ButonNavbar()));
                           },
                           child: const Text("Masuk")),
                     ),

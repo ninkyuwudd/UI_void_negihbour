@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ui_void">
    <application
-        android:label="ui_void"
+        android:label="Neighbour"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

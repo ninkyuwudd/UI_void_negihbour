@@ -9,27 +9,27 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  int _selectedIndex = 0;
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: 
       Scaffold(
         appBar: AppBar(
+          toolbarHeight: 70,
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading:
-              SizedBox(
-                child:Container(
-                  margin: const EdgeInsets.only(left: 15),
+                Container(
+                  margin: const EdgeInsets.only(left: 15,top: 10),
                   child: Image.asset("images/void_logo_homepage.png"),
-              ), ),
-          actions: [
+              ), 
             
+          actions: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                
+                SizedBox(height: 10,),
                 const Text(
                   "Hi, Asta!",
                   style: TextStyle(
@@ -50,20 +50,20 @@ class _HomePageState extends State<HomePage> {
                       width: 10,
                     ),
                     Icon(
-                      Icons.map,
+                      Icons.pin_drop,
                       color: Colors.black,
                     )
                   ],
                 ),
               ],
             ),
-            SizedBox(width: 20,)
+            const SizedBox(width: 20,)
           ],
         ),
         body: Container(
           height: MediaQuery.of(context).size.height,
           margin:
-              const EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 30),
+              const EdgeInsets.only(top: 30, left: 20, right: 20),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 79, 78, 189),
+                    color: const Color.fromARGB(255, 75, 85, 159),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                           SizedBox(
                             width: 200,
                             child: Text(
-                              "Anda sedang berada di rumahdan siap menerima tamu",
+                              "Anda sedang berada di rumah dan siap menerima tamu",
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
@@ -223,7 +223,7 @@ class _HomePageState extends State<HomePage> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {},
-                            child: const Text("lihat semua"),
+                            child: const Text("lihat semua",style: TextStyle(color: Color.fromARGB(255, 79, 78, 189)),),
                           )
                         ],
                       ),
@@ -234,7 +234,7 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.all(13),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          border: Border.all(width: 2.0, color: const Color.fromARGB(255, 74, 74, 74)),
+                          border: Border.all(width: 1.0, color: const Color.fromARGB(80, 74, 74, 74)),
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const [
                             BoxShadow(
@@ -292,7 +292,7 @@ class _HomePageState extends State<HomePage> {
                           const Spacer(),
                           GestureDetector(
                             onTap: () {},
-                            child: const Text("lihat semua"),
+                            child: const Text("lihat semua",style: TextStyle(color: Color.fromARGB(255, 79, 78, 189))),
                           )
                         ],
                       ),
@@ -303,7 +303,7 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.all(13),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          border: Border.all(width: 2.0, color: const Color.fromARGB(255, 74, 74, 74)),
+                          border: Border.all(width: 1.0, color: const Color.fromARGB(80, 74, 74, 74)),
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const [
                             BoxShadow(
@@ -341,38 +341,36 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
 
-      
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _selectedIndex,
-          onTap: (value) {
-            
-          },
-          type: BottomNavigationBarType.fixed,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Beranda",
+        // bottomNavigationBar: BottomNavigationBar(
+        //   currentIndex: _selectedIndex,
+
+        //   type: BottomNavigationBarType.fixed,
+          
+        //   items: const [
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.home),
+        //       label: "Beranda",
               
-            ),
-            BottomNavigationBarItem(
+        //     ),
+        //     BottomNavigationBarItem(
               
-              icon: Icon(Icons.document_scanner),
-              label: "Riwayat",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.people),
-              label: "Tetangga",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.map),
-              label: "Jelajahi",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: "Akun",
-            ),
-          ],
-        ),
+        //       icon: Icon(Icons.document_scanner),
+        //       label: "Riwayat",
+        //     ),
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.people),
+        //       label: "Tetangga",
+        //     ),
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.map),
+        //       label: "Jelajahi",
+        //     ),
+        //     BottomNavigationBarItem(
+        //       icon: Icon(Icons.person),
+        //       label: "Akun",
+        //     ),
+        //   ],
+        // ),
       )
     );
   }
